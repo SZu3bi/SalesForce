@@ -1,0 +1,17 @@
+<template>
+    <lightning-input label="FirstName" value={realFormData.FirstName} if:true={realFormData} onchange={updateValue}  data-field="FirstName"></lightning-input>
+<lightning-input label="LastName" value={realFormData.LastName} if:true={realFormData} onchange={updateValue}  data-field="LastName"></lightning-input>
+<lightning-input label="zaba6" type="checkbox"  data-field="zaba6__c" checked={realFormData.zaba6__c} onchange={updateCheckValue}></lightning-input>
+<lightning-checkbox-group name="Checkbox Group"
+label="Checkbox Group"
+
+options={options}
+value={value}
+onchange={handleChange}></lightning-checkbox-group>
+<!--handleChange-->
+<button  class="slds-button" onclick={saveRecord}> Save Record</button>
+
+<br/>
+<button  class="slds-button" onclick={createRecord}> Create new hardcored CONTACT Record and load in UI</button>
+    
+</template>

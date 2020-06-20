@@ -1,0 +1,25 @@
+<template>
+
+<div>
+<lightning-input label="FirstName" value={realFormData.FirstName} if:true={realFormData} 
+    onchange={updateValue}  data-field="FirstName" style="width:200px;margin-left:750px;"></lightning-input>
+    <lightning-input label="LastName" value={realFormData.LastName} if:true={realFormData} 
+onchange={updateValue}  data-field="LastName" style="width:200px;margin-left:750px;"></lightning-input>
+<lightning-input label="Checked" type="checkbox"  data-field="Checked__c" checked={realFormData.Checked__c}
+onchange={updateValue} style="width:200px;margin-left:750px;"></lightning-input>
+</div>
+
+
+
+<!--{recordId}-->
+
+<br> <br/>
+
+<div style="margin-left:750px;">
+
+
+<lightning-button class="slds-m-left_x-small" type="save" label=" Save Record" onclick={saveRecord}  onsubmit={showSuccessToast}></lightning-button>
+
+<lightning-button class="slds-m-left_x-small" type="save" label="new" onclick={createRecord}  onsubmit={showSuccessToast}>></lightning-button>
+</div>
+</template>

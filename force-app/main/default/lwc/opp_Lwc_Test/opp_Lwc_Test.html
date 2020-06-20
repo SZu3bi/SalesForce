@@ -1,0 +1,22 @@
+<template>
+    <lightning-record-edit-form object-api-name="Opportunity">
+<lightning-input label="Name" value={realFormData.Name} if:true={realFormData} 
+onchange={updateValue1}  data-field="Name"></lightning-input>
+
+<lightning-input label="Account Name" value={realFormData.AccountId} if:true={realFormData} 
+onchange={updateValue}  data-field="AccountId"></lightning-input>
+<lightning-input label="zaid" type="checkbox"  data-field="zaid__c" checked={realFormData.zaid__c} 
+onchange={updateCheckValue}></lightning-input>
+<lightning-input label="manaf" type="checkbox"  data-field="manaf__c" checked={realFormData.manaf__c} 
+onchange={updateCheckValue}></lightning-input>
+
+
+
+
+
+<button  class="slds-button" onclick={saveRecord}> Save Record</button>
+
+<br/>
+<button  class="slds-button" onclick={createRecord}> Create new </button>
+    </lightning-record-edit-form>
+</template>
